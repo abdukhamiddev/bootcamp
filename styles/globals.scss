@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-family: "Poppins", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+}
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 80vh;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizelegibility;
+  overflow-x: hidden;
+  background: #fdfdfd;
+  color: #1d1d1d;
+
+  overscroll-behavior-y: none;
+}
+main {
+  position: relative;
+}
+p {
+  line-height: 160%;
+}
+html[data-direction="down"][data-at-top="false"] #header {
+  transform: translateY(-220%);
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+p {
+  line-height: 160%;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+button {
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none transparent;
+  color: inherit;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font: inherit;
+  line-height: normal;
+  user-select: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+input,
+textarea {
+  border: none;
+}
+.btn-common {
+  @apply text-inherit bg-[#5552E6] rounded-[35px] disabled:bg-[#B4B4B4] text-[#F3F2F2];
+}
+
+.menu-col {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: start;
+  grid-gap: 4rem;
+  @media (max-width: 600px) {
+    grid-gap: 2rem;
+    :first-child {
+      display: none;
+    }
+    :last-child {
+      margin-bottom: 4rem;
+    }
+  }
+  @media (max-width: 376px) {
+    grid-gap: 1rem;
+    :last-child {
+      margin-bottom: 2rem;
+    }
+  }
+}

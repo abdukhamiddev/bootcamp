@@ -15,8 +15,12 @@ export const SmoothScrollProvider = ({ children, options }) => {
 
           setScroll(
             new LocomotiveScroll({
-              el:
-                document.querySelector("[data-scroll-container]") ?? undefined,
+              el: document.querySelector("[data-scroll-container]"),
+              smooth: true,
+              tablet: {
+                smooth: false,
+              },
+              getDirection: true,
               ...options,
             })
           );
@@ -25,6 +29,7 @@ export const SmoothScrollProvider = ({ children, options }) => {
         }
       })();
     }
+
     setTimeout(() => {
       if (scroll) {
         scroll.update();

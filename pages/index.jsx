@@ -10,12 +10,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <div data-scroll-container id="scroll-container">
-        <SmoothScrollProvider
-          options={{ smooth: true, lerp: 0.07 }}
-        ></SmoothScrollProvider>
-      </div>
     </>
   );
 }

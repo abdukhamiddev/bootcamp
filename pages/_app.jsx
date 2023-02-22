@@ -1,5 +1,5 @@
 import Nav from "@/components";
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 
 import { Poppins } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
